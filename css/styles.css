@@ -16,30 +16,6 @@ body {
   color: var(--primary-text-color);
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-ul,
-ol {
-  padding-left: 0;
-  margin: 0;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-}
-
 .link {
   text-decoration: none;
 }
@@ -81,12 +57,46 @@ img {
   letter-spacing: 0.03em;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
 /* HEADER */
 
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
 }
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* .header-navigation {
+  display: flex;
+  align-items: center;
+} */
 
 .header-logo-part {
   color: var(--logo-primary-color);
@@ -105,6 +115,29 @@ img {
   color: var(--accent-color);
 }
 
+.header-list {
+  display: flex;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-contact-link {
   color: var(--main-text-color);
 }
@@ -117,35 +150,39 @@ img {
 /* HERO */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  margin-top: 0;
   text-align: center;
+
   background-color: #2f303a;
 }
 
 .hero-title {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 30px;
-  max-width: 696px;
+
   color: #ffffff;
 }
 
 .hero-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  margin-bottom: 0;
+
   font-family: inherit;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: flex;
   align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   text-align: center;
+
   color: #ffffff;
   background-color: var(--accent-color);
 }
@@ -170,13 +207,31 @@ img {
   margin: -1px;
 }
 
+.benefits-list {
+  display: flex;
+  background-color: teal;
+  justify-content: space-between;
+}
+
+.benefits-item {
+  width: 270px;
+  background-color: tomato;
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(4n) {
+  margin-right: 0;
+}
+
 .benefits-item-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+
   color: var(--title-color);
 }
 
@@ -191,6 +246,10 @@ img {
 
 .work {
   padding-bottom: 94px;
+}
+
+.work-list {
+  display: flex;
 }
 
 .work-title {
