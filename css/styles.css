@@ -89,11 +89,37 @@ img {
   border: 1px solid #ececec;
 }
 
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 93px;
+}
+
 .header-logo-part {
   color: var(--logo-primary-color);
 }
 
+.header-list {
+  display: flex;
+}
+
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: #212121;
 }
 
@@ -106,7 +132,20 @@ img {
   color: var(--accent-color);
 }
 
+.header-contact-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--main-text-color);
 }
 
@@ -138,7 +177,9 @@ img {
 }
 
 .hero-btn {
-  padding: 10px 32px;
+  min-width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 4px;
 
   font-family: inherit;
@@ -174,6 +215,20 @@ img {
   margin: -1px;
 }
 
+.benefits-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.benefits-item {
+  flex-basis: calc((100%-120px) / 4);
+  margin-left: 30px;
+}
+
+.benefits-item + .benefits-item {
+  margin-left: 30px;
+}
+
 .benefits-item-title {
   margin-bottom: 10px;
 
@@ -187,6 +242,7 @@ img {
 }
 
 .benefits-item-text {
+  width: 270px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -212,11 +268,30 @@ img {
   color: var(--title-color);
 }
 
+.work-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.work-item {
+  flex-basis: calc((100%-90px) / 3);
+  margin-left: 30px;
+}
+
+.work-item + .work-item {
+  margin-left: 30px;
+}
+
 /* TEAM */
 
 .team {
   padding-top: var(--tipical-padding);
   padding-bottom: var(--tipical-padding);
+}
+
+.team-list {
+  display: flex;
+  margin-left: -30px;
 }
 
 .team-title {
@@ -230,8 +305,13 @@ img {
   color: var(--title-color);
 }
 
+.team-item {
+  flex-basis: calc((100%-120px) / 4);
+  margin-left: 30px;
+}
+
 .team-size {
-  padding: 30px 80px;
+  padding: 30px 62px;
 }
 
 .team-item-title {
@@ -241,6 +321,7 @@ img {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-align: center;
 
   color: var(--title-color);
 }
@@ -249,6 +330,8 @@ img {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-align: center;
+
   color: var(--main-text-color);
 }
 
@@ -261,26 +344,34 @@ img {
 }
 
 .footer-logo {
+  display: block;
   margin-bottom: 20px;
 }
 
 .footer-logo-part {
-  /* margin-bottom: 20px; */
-
   color: #ffffff;
 }
 
-.footer-address-link {
+.footer-address-item {
+  display: block;
   margin-bottom: 9px;
+}
 
+.footer-address-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-address-link {
   color: #ffffff;
 }
 
 .footer-contact-link {
-  margin-bottom: 9px;
-
   color: rgba(255, 255, 255, 0.6);
 }
+
+/* .footer-contact-link:last-child {
+  margin-bottom: 0;
+} */
 
 /* -----------PORTFOLIO------------ */
 
@@ -292,16 +383,25 @@ img {
 }
 
 .filtr-list {
+  display: flex;
+  justify-content: center;
   margin-bottom: 50px;
 }
 
+.filtr-item:not(:last-child) {
+  margin-right: 8px;
+}
 .filtr-btn {
+  padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  border-radius: 4px;
+  border: 1px solid #f5f4fa;
 
   color: var(--portfolio-title-color);
   background-color: var(--bgc-button-filtr);
@@ -309,6 +409,7 @@ img {
 
 .filtr-btn:hover,
 .filtr-btn:focus {
+  border: 1px solid #2196f3;
   color: #ffffff;
   background-color: var(--accent-color);
 }
@@ -318,8 +419,30 @@ img {
   background-color: var(--accent-color);
 }
 
+.examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.examples-item {
+  width: calc(100% / 3-30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.examples-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.examples-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
 .examples-size {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .examples-item-title {
