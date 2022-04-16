@@ -84,8 +84,6 @@ img {
 /* HEADER */
 
 .header {
-  padding-top: 25px;
-  padding-bottom: 25px;
   border: 1px solid #ececec;
 }
 
@@ -311,7 +309,8 @@ img {
 }
 
 .team-size {
-  padding: 30px 62px;
+  padding-top: 30px;
+  padding-bottom: 62px;
 }
 
 .team-item-title {
